@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login WhatsGoingON</title>
+	<link href="styleLoginReal.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300Playfair+Display" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="login-page">
+<div class="form">
+
+	<div class="header">
+		<h1><i class="fa fa-comments"></i>WhatsGoingON</h1>
+		<p id="errorWarnings"></p>
+	</div>
+
+		<form class="login-form"  action="wtProjekt.html" method="post" onsubmit="return checkLogin();">
+			<div class="login">
+				<i id="iconUsername" class="fa fa-user"></i>
+					<input type="text" id="usernameLogin" placeholder="Username"><br>
+				<i id="icon" class="fa fa-key fa-fw"></i>
+					<input type="password" id="passwordLogin" placeholder="Password"><br>
+					<input type="submit" id="login" value="Login"><br>
+			</div>
+		</form>
+</div>
+			<h2 id="typedTextLogin">______Please Login_____</h2>
+</div>
+
+<script>
+
+		//Login validation
+		function checkLogin(){
+			var checkUsername = /^([A-Za-z0-9_]){1,}$/;
+			var checkPassword = /^([A-Za-z0-9_\-\.\@\!\?\§\%\&\#]){8,20}$/;
+			var textUsernameLogin = $("#usernameLogin").val();
+			var textPasswordLogin = $("#passwordLogin").val();
+
+			if(textUsernameLogin == "" || textPasswordLogin == ""){
+				$("#errorWarnings").html("Please fill in all fields ...");
+				$("#errorWarnings").css("background-color", "pink");
+				$("#errorWarnings").css("border", "2px solid red");
+				return false;
+			}
+			else if(checkUsername.test(textUsernameLogin) == false){
+				$("#errorWarnings").html("Invalid Username. Please try it again ...");
+				$("#errorWarnings").css("background-color", "pink");
+				$("#errorWarnings").css("border", "2px solid red");
+				return false;
+			}
+			else if(checkPassword.test(textPasswordLogin) == false){
+				$("#errorWarnings").html("Invalid Password. You have to type at least 8 chracters. Please try it again ...");
+				$("#errorWarnings").css("background-color", "pink");
+				$("#errorWarnings").css("border", "2px solid red");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+</script>
+
+</body>
+</html>
