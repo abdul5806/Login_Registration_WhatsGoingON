@@ -41,7 +41,7 @@ body {
 }
 
 .form #errorWarnings{
-	width: 1000px;
+	width: 80%;
 	height: 50px;
 	text-align: center;
 	margin: 20px auto 20px auto;
@@ -56,7 +56,7 @@ body {
 	width: 100%;
 	margin-top: 30px;
 	text-align: center;
-	font-size: 70pt;
+	font-size: 50pt;
 	margin-bottom: 20px;
 	position: relative;
 	text-decoration: underline;
@@ -64,7 +64,7 @@ body {
 	}
 
 .form p{
-	width: 1000px;
+	width: 80%;
 	color: white;
 	text-align: center;
 	margin: 40px auto 20px auto;
@@ -140,13 +140,18 @@ body {
 	background: #e5e4ee;
 }
 
+.login-page .footer {
+	height: 10px;
+}
+
  .login-page h2 {
-	width: 21ch;
-	height: 100px;
+	width: 23ch;
+	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 25px;
 	animation: typing-text 3s steps(23), blink 0.5s infinite alternate;
-	font-size: 50pt;
+	font-size: 300%;
 	color: white;
 	text-align: center;
 	overflow: hidden;
@@ -159,7 +164,7 @@ body {
 		width: 0;
 	}
 	to {
-		width: 21ch;
+		width: 23ch;
 	}
 }
 
